@@ -92,7 +92,18 @@
     background-color: var(--black-color);
 
     .team {
+      flex: 1;
       padding: 10px;
+      position: relative;
+      img  { 
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
+        position: absolute;
+        height: 70%;
+        width: 70%;
+        object-fit: contain;
+      }
     }
   }
 
