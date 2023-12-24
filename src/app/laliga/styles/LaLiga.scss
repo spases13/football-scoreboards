@@ -1,0 +1,170 @@
+@font-face {
+  font-family: Laliga;
+  src: url("../fonts/89.\ Boca\ Juniors\ 2024\ Football\ Font\ Free\ Download\ by\ Sports\ Designss.ttf");
+}
+
+:root {
+  --primary-color: #ff4b44;
+  --black-color: #01000c;
+  --white-color: #fdfdfd;
+  --width: 826px;
+  --height: 446px;
+  --ratio: calc(826/446);
+  --home-color-1: #0067B1;
+  --home-color-2: #fff;
+  --away-color-1: #0BB363;
+  --away-color-2: #0BB363;
+
+}
+
+.Scoreboard.LaLiga {
+  // font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: "Laliga";
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--black-color);
+  letter-spacing: 1px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  // overflow: hidden;
+  margin: 2rem;
+  width: 250px;
+  aspect-ratio: var(--ratio);
+  background-color: var(--white-color);
+  display: flex;
+
+  .left_part {
+    flex: 1.8;
+    display: flex;
+    flex-direction: column;
+
+    .logo {
+      // height: 100%;
+      // background-color: yellow;
+      background-color: var(--primary-color);
+      height: 50%;
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 5px 10px rgba(0 0 0 /.2);
+
+      img {
+        padding: 10px;
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+        // position: absolute;
+      }
+    }
+
+    .left_time_part {
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+
+      .time {
+        flex: 1;
+        background-color: var(--white-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .time_text {}
+      }
+
+      .add_time {
+        background-color: var(--primary-color);
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--white-color);
+        // background-color: pink;
+      }
+    }
+  }
+
+  .teams {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--black-color);
+
+    .team {
+      padding: 10px;
+    }
+  }
+
+  .teams_colors {
+    display: flex;
+    flex-direction: column;
+    width: 7px;
+    box-sizing: content-box;
+
+
+    .team_color {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 5px 0px 10px rgba(0 0 0 /.2);
+
+      &:first-child {
+        border-bottom: 2px solid rgba(0 0 0 /.3);
+
+      }
+
+      .color {
+        flex: 1;
+        // background-color: lime; 
+        // background-color: gray;
+      }
+
+      &.home {
+        .color1 {
+          background-color: var(--home-color-1);
+        }
+
+        .color2 {
+          background-color: var(--home-color-2);
+        }
+      }
+
+      &.away {
+        .color1 {
+          background-color: var(--away-color-1);
+        }
+        .color2 {
+          background-color: var(--away-color-2);
+        }
+      }
+    }
+
+  }
+
+  .scores {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    &::after {
+      content: "";
+      height: 1px;
+      width: 80%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      translate: -50% -50%;
+      background-color: var(--black-color);
+    }
+
+    .team_score {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+    }
+  }
+}
