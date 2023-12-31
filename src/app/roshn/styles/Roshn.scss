@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+:root {
+  --home_team_color: whitesmoke;
+  --away_team_color: #000;
+  --gray: #373B3A;
+  --white: #E8ECEE;
+}
+
+body {
+  background-color: #000;
+}
+
+.bg {
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    // display: none;
+  }
+}
+
+
+.Scoreboard {
+  font-family: "Noto Sans Arabic", sans-serif;
+  height: 140px;
+  scale: 0.55;
+  width: 600px;
+  translate: -90px 10px;
+  color: var(--gray);
+  font-weight: 600;
+  font-size: 2.2rem;
+  box-shadow: 0 0 10px rgba(0 0 0 /.2);
+  display: flex;
+  gap: 5px;
+  z-index: 0;
+
+
+
+  .logo_section {
+    background-color: var(--white);
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+
+    img {}
+  }
+
+  .score_section {
+    display: flex;
+    gap: 5px;
+    flex: 1;
+
+    .teams_logos {
+      flex: 0.7;
+      display: flex;
+      flex-direction: column;
+      background-color: pink;
+
+      .home_team,
+      .away_team {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+
+        img {
+          height: 75%;
+          width: 80%;
+          object-fit: contain;
+          position: absolute;
+        }
+      }
+
+      .home_team {
+        flex: 1;
+        background-color: var(--home_team_color);
+      }
+
+      .away_team {
+        flex: 1;
+        background-color: var(--away_team_color);
+      }
+    }
+
+    .teams_names {
+      background-color: var(--white);
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      // background-color: violet;
+
+      .home_team,
+      .away_team {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        .team_name,
+        .team_name_arabic {
+          translate: 0 calc(-100% - 20px);
+        }
+
+        .team_name {
+          animation: fade 0.7s ease forwards;
+        }
+
+        .team_name_arabic {
+          font-size: 1.9rem;
+          font-family: "Tajawal", sans-serif;
+          animation: fade2 0.7s ease forwards;
+        }
+      }
+
+      .home_team {
+        border-bottom: 10px solid var(--home_team_color);
+      }
+
+      .away_team {
+        flex: 1;
+        border-bottom: 10px solid var(--away_team_color);
+      }
+    }
+
+  }
+
+  .time_section_and_score_values {
+    flex: 1;
+    display: flex;
+    gap: 5px;
+    background-color: var(--white);
+
+    .teams_scores_values {
+      width: 50px;
+      display: flex;
+      flex-direction: column;
+
+      .home_team,
+      .away_team {
+        flex: 1;
+        background-color: var(--gray);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .home_team_score_value,
+        .away_team_score_value {
+          color: var(--white);
+          font-size: 2.5rem;
+        }
+      }
+
+      .home_team {
+        // background-color: orange;
+      }
+
+      .away_team {
+        // background-color: green;
+
+      }
+    }
+
+    .time_section {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .regular_time_value {
+        display: flex;
+        align-items: center;
+        color: var(--gray);
+        font-size: 2.5rem;
+
+        .two_dots {
+          font-weight: 900;
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+  }
+
+
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    // translate: 0 0;
+  }
+
+  100% {
+    opacity: 1;
+    // translate: 0 -100%;
+    translate: 0 0;
+  }
+}
+
+@keyframes fade2 {
+  0% {
+    opacity: 0;
+    // translate: 0 0;
+
+  }
+
+  100% {
+    opacity: 1;
+    translate: 0 0;
+    // translate: 0 -100%;
+
+  }
+}
