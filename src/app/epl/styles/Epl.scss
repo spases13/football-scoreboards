@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+body,
+html {
+  font-family: "Poppins", "Ubuntu", sans-serif;
+  min-height: 100vh;
+  width: 100%;
+}
+
+body {
+  background: url("https://cdn.absolutechelsea.com/wp-content/uploads/2023/12/wolverhampton-wanderers-v-chelsea-fc-premier-league-4-1-scaled.jpg") center center no-repeat fixed;
+  background-size: 100% auto;
+  height: 100vh;
+}
+
+.scoreboard {
+  scale: 0.7;
+  box-shadow: 0 0 5px rgba(0 0 0 /.3);
+  height: fit-content;
+  width: 495px;
+  border-radius: 10px 10px 3px 3px;
+  background: linear-gradient(to right, rgb(28, 28, 112) 50%, orange -50%);
+  translate: -20px 40px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    opacity: 1;
+    height: 80px;
+    width: auto;
+    // background-color: red;
+    translate: -50% -50%;
+    z-index: 1000 !important;
+  }
+
+
+
+  .score {
+    flex: 1;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+
+    &:last-child {
+      justify-content: flex-start;
+    }
+
+    h1.score_value {
+      filter: drop-shadow(0 0 2px rgba(0 0 0 /.7));
+      position: absolute;
+      font-size: 5.5rem;
+      font-weight: 800;
+      color: white;
+    }
+
+    &.score1 {
+      .team_name {
+        color: #fff;
+        translate: -65% -47%;
+      }
+
+      h1.score_value {
+        translate: 70px -5px
+      }
+    }
+
+    &.score2 {
+
+      .team_name {
+        color: #111;
+        translate: -45% -47%;
+      }
+
+      h1.score_value {
+        translate: -70px -5px
+      }
+    }
+
+
+
+    .team_name {
+      font-size: 2.7rem;
+      // text-shadow: 0 0 2px #000;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      font-weight: 800;
+
+    }
+  }
+
+  .time {
+    border-radius: 0 0 15px 15px;
+    height: 40px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 2px;
+    background-color: rgb(65, 7, 65);
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    translate: -50% 0;
+
+    span {
+      font-weight: 800;
+      letter-spacing: -1px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 22px;
+    }
+  }
+}
+
+.l3iba {
+  height: 50px;
+  width: 200px;
+  // border: 5px solid;
+  opacity: 0.2;
+  // mix-blend-mode: difference;
+
+  .tCont {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .t1 {
+      flex: 1;
+      width: 100%;
+      background-color: white;
+      transform: skewX(40deg);
+    }
+
+    .t2 {
+      flex: 1;
+      width: 100%;
+      background-color: white;
+      transform: skewX(40deg);
+      margin-top: -1px;
+    }
+
+
+  }
+}

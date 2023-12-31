@@ -11,7 +11,7 @@ import away_team from "./assets/away_team_logo.png"
 
 const LaLiga = () => {
   const date = new Date();
-  const time = date.getHours() + ":" + date.getMinutes();
+  // const time = date.getHours() + ":" + date.getMinutes();
 
   return (
     <div className="Scoreboard LaLiga">
@@ -21,7 +21,7 @@ const LaLiga = () => {
         </div>
         <div className="left_time_part">
           <div className="time">
-            <h1 className="time_text">{time}</h1>
+            <h1 className="time_text">{"45:03"}</h1>
           </div>
           {/* Temporary  */}
           <div className="add_time">+5</div>

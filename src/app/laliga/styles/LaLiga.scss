@@ -17,6 +17,12 @@
 
 }
 
+body {
+  background: url("https://images.supersport.com/media/yenjc2o4/real-sociedadvreal-betis-2023-g-1200.jpg?width=2048&quality=90&format=webp") center center no-repeat fixed;
+  background-size: 100% auto;
+  height: 100vh;
+}
+
 .Scoreboard.LaLiga {
   // font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-family: "Laliga";
@@ -26,7 +32,7 @@
   letter-spacing: 1px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   // overflow: hidden;
-  margin: 2rem;
+  translate: 2rem 2rem;
   width: 250px;
   aspect-ratio: var(--ratio);
   background-color: var(--white-color);
@@ -95,7 +101,8 @@
       flex: 1;
       padding: 10px;
       position: relative;
-      img  { 
+
+      img {
         left: 50%;
         top: 50%;
         translate: -50% -50%;
@@ -145,6 +152,7 @@
         .color1 {
           background-color: var(--away-color-1);
         }
+
         .color2 {
           background-color: var(--away-color-2);
         }
