@@ -4,8 +4,8 @@ import { useState } from "react";
 import "./styles/Roshn.scss";
 
 import logo from "./assets/Roshn_Saudi_League_Logo.svg.png";
-import home_team_logo from "./assets/al-nassr.png";
-import away_team_logo from "./assets/al-ittihad.png";
+import home_team_logo from "./assets/al-ittihad.png";
+import away_team_logo from "./assets/al-nassr.png";
 import bg from "./assets/bg.png";
 import Image from "next/image";
 
@@ -31,22 +31,22 @@ const Roshn = () => {
         </div>
         <div className="score_section">
           <div className="teams_logos">
-            <div className="away_team team">
-              <Image src={away_team_logo} alt="Roshn_Logo"></Image>
-            </div>
             <div className="home_team team">
               <Image src={home_team_logo} alt="Roshn_Logo"></Image>
             </div>
+            <div className="away_team team">
+              <Image src={away_team_logo} alt="Roshn_Logo"></Image>
+            </div>
           </div>
           <div className="teams_names">
-            <div className="away_team team">
+            <div className="home_team team">
               {isArabic ? (
                 <span className="team_name_arabic">الإتحاد</span>
               ) : (
                 <span className="team_name">ITT</span>
               )}
             </div>
-            <div className="home_team team">
+            <div className="away_team team">
               {isArabic ? (
                 <span className="team_name_arabic">النصر</span>
               ) : (
