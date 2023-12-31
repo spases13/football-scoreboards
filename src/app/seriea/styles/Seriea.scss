@@ -1,0 +1,127 @@
+:root {
+  --color1: #1D47C8;
+  --color2: #fff;
+  --color3: #111;
+  --color4: #37C3D1;
+  --color5: #0B4771;
+  //
+  --skew: -25deg;
+}
+
+body {
+  background: url(https://assets-us-01.kc-usercontent.com/31dbcbc6-da4c-0033-328a-d7621d0fa726/a0fa3bdb-9118-4a22-8715-1df65e6d7937/Apple%20TV%20-%20Serie%20A.png?w=3840&q=100 ) center center  no-repeat fixed;
+  background-size: cover;
+}
+
+.Scoreboard {
+  translate: 50px 50px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  height: 40px;
+  // min-width: 350px;
+  width: fit-content;
+  color: var(--color2);
+  // background-color: var(--color1);
+  background-color: var(--color1);
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+
+
+  .score_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 1rem;
+
+
+    .team {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+
+      .team_name_value {
+        position: absolute;
+      }
+    }
+
+    .home_team {}
+
+    .away_team {}
+
+    .score {
+      color: var(--color3);
+      height: 100%;
+      justify-content: space-between;
+      align-items: center;
+      width: 100px;
+      display: flex;
+      position: relative;
+
+      .team_color {
+        transform: skew(var(--skew));
+        width: 10px;
+        height: 100%;
+      }
+
+      .home_team_color {
+        background-color: #970A2C;
+      }
+
+      .away_team_color {
+        background-color: rgb(0, 102, 255);
+      }
+
+      .score_value {
+        left: 50%;
+        translate: -50% 0;
+        position: absolute;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: var(--color2);
+        transform: skewX(var(--skew));
+      }
+    }
+  }
+
+  .time_section {
+    width: 100px;
+    position: absolute;
+    right: 0;
+    translate: calc(100% - 10px) 0;
+    z-index: -1;
+    height: 100%;
+    background-color: var(--color4);
+    transform: skewX(var(--skew));
+
+
+    &::before {
+      content: "";
+      height: 100%;
+      width: 20px;
+      background-color: var(--color1);
+      position: absolute;
+      translate: -10px;
+      transform: skewX(25deg);
+    }
+
+    .time_value {
+      color: var(--color5);
+      transform: skewX(25deg);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      translate: -50% -50%;
+    }
+  }
+}
